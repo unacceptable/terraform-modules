@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: scm checkout
+      uses: actions/checkout@v2
     - name: init
       uses: ./.github/workflows/ci/init
     - name: lint

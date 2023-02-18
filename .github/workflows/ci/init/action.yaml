@@ -3,7 +3,5 @@ description: 'Lint terraform module'
 runs:
   using: 'composite'
   steps:
-  - name: Checkout code
-    uses: actions/checkout@v2
   - name: Terraform init
     uses: ./.github/workflows/ci/init/terraform
