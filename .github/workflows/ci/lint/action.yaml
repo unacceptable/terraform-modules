@@ -2,6 +2,11 @@ name: 'Pipeline Linting'
 description: 'Lint terraform module'
 runs:
   using: 'composite'
+  image: 'wata727/tflint:latest'
   steps:
   - name: Terraform Lint
-    uses: ./.github/workflows/ci/lint/tflint
+    run: |
+      find . -name "*.tf" -exec dirname "{}" ";" | \
+          sort | \
+          uniq | \
+          xargs tflint

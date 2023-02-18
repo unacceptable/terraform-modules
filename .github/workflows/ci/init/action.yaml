@@ -1,5 +1,7 @@
 name: 'Pipeline initialization'
 runs:
   using: 'composite'
+  image: 'hashicorp/terraform'
   steps:
-  - uses: ./.github/workflows/ci/init/terraform
+  - name: Terraform init
+    run: terraform init
