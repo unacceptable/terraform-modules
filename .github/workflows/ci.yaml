@@ -10,6 +10,5 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-
     - name: Run tflint
-      uses: ./.github/actions/workflow/ci/lint/tflint
+      uses: ./.github/workflows/ci/lint/tflint
