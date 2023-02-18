@@ -1,0 +1,15 @@
+name: CI Pipeline
+
+on:
+  push:
+
+jobs:
+  tflint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Run tflint
+      uses: ./.github/actions/workflow/ci/lint/tflint.yaml
