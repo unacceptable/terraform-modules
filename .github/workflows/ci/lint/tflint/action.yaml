@@ -1,0 +1,12 @@
+name: 'Terraform Lint'
+description: 'Lint terraform module'
+runs:
+  using: 'composite'
+  image: 'wata727/tflint:latest'
+  steps:
+  - name: Run tflint
+    run: |
+      find . -name "*.tf" -exec dirname "{}" ";" | \
+          sort | \
+          uniq | \
+          xargs tflint
