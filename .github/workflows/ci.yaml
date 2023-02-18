@@ -4,11 +4,11 @@ on:
   push:
 
 jobs:
-  tflint:
+  pipeline:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-    - name: Run tflint
-      uses: ./.github/workflows/ci/lint/tflint
+    - name: init
+      uses: ./.github/workflows/ci/init
+    - name: lint
+      uses: ./.github/workflows/ci/lint

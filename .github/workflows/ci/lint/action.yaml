@@ -1,0 +1,7 @@
+name: 'Pipeline Linting'
+description: 'Lint terraform module'
+runs:
+  using: 'composite'
+  steps:
+  - name: Terraform Lint
+    uses: ./.github/workflows/ci/lint/tflint
