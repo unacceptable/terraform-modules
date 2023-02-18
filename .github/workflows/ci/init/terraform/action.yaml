@@ -1,7 +1,7 @@
 name: 'Pipeline initialization'
 description: 'Lint terraform module'
 runs:
-  using: 'composite'
+  using: 'docker'
   image: 'hashicorp/terraform'
   steps:
   - name: Terraform init

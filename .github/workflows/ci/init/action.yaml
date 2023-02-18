@@ -1,7 +1,5 @@
 name: 'Pipeline initialization'
-description: 'Lint terraform module'
 runs:
   using: 'composite'
   steps:
-  - name: Terraform init
-    uses: ./.github/workflows/ci/init/terraform
+  - uses: ./.github/workflows/ci/init/terraform
